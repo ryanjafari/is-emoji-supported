@@ -59,6 +59,10 @@ const isSupported = (() => {
   // Initialize convas context
   ctx.font = textSize + 'px Arial, Sans-Serif';
   ctx.textBaseline = 'top';
+
+  // Add willReadFrequently 
+  ctx.canvas.willReadFrequently = true; 
+  
   ctx.canvas.width = CANVAS_WIDTH * 2;
   ctx.canvas.height = CANVAS_HEIGHT;
 
