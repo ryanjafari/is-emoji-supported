@@ -44,7 +44,9 @@ export function setCacheHandler(store: TCache): void {
 const isSupported = (() => {
   let ctx = null;
   try {
-    ctx = document.createElement('canvas').getContext('2d');
+    ctx = document
+      .createElement('canvas')
+      .getContext('2d', {willReadFrequently: true});
   } catch {}
 
   // Not in browser env
